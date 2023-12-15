@@ -1,0 +1,62 @@
+.header {
+  position: relative;
+  @include flex(row, space-between, center);
+  padding: 0 100px;
+  height: 80px;
+  border-radius: 56px;
+  background: $bg;
+  box-shadow: $shadow;
+  margin-bottom: 80px;
+  @media (max-width: 991px) {
+    padding: 0 32px;
+    height: 64px;
+  }
+  &__logo {
+    @media (max-width: 991px) {
+      width: 86px !important;
+      height: 56px !important;
+    }
+  }
+  &__nav {
+    @include flex(row, center, center);
+    gap: 80px;
+    @media (max-width: 1200px) {
+      gap: 50px;
+    }
+    @media (max-width: 991px) {
+      position: absolute;
+      top: 80px;
+      right: -100%;
+      @include flex(column, center, center);
+      gap: 30px;
+      border-radius: 56px;
+      background: $bg;
+      box-shadow: $shadow;
+      padding: 30px 50px;
+      @include transition;
+    }
+    &-item {
+      font-size: 24px;
+      font-weight: 600;
+
+      &:last-child {
+        color: $accent;
+      }
+    }
+  }
+  &__call {
+    @media (max-width: 991px) {
+      position: fixed;
+      right: 16px;
+      bottom: 50px;
+    }
+  }
+  &__burger {
+    display: none;
+    @media (max-width: 991px) {
+      @include flex(column, center, center);
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
