@@ -43,6 +43,9 @@
     font-size: 64px;
     font-weight: 500;
     margin-bottom: 16px;
+    @media (max-width: 1450px) {
+      font-size: 50px;
+    }
     @media (max-width: 991px) {
       margin: 32px 32px 16px 32px;
       font-size: 30px;

@@ -35,3 +35,15 @@
     color: $accent;
   }
 }
+
+@mixin title {
+  position: relative;
+  z-index: 3;
+  font-size: 64px;
+  font-weight: 400;
+  letter-spacing: 1.28px;
+  @media (max-width: 991px) {
+    font-size: 28px;
+    letter-spacing: 0.56px;
+  }
+}

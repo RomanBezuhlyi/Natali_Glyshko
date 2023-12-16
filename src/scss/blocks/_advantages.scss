@@ -1,0 +1,77 @@
+.advantages-wrappper {
+  margin-bottom: 200px;
+  @media (max-width: 991px) {
+    margin-bottom: 80px;
+  }
+}
+
+.advantages {
+  &__title {
+    position: relative;
+    margin-bottom: 80px;
+    @media (max-width: 991px) {
+      margin-bottom: 40px;
+    }
+    img {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      @media (max-width: 991px) {
+        width: 32px;
+        height: 32px;
+      }
+    }
+    h2 {
+      @include title;
+    }
+  }
+  &__list {
+    @include flex(row, space-between, flex-start);
+    flex-wrap: wrap;
+    gap: 20px;
+    @media (max-width: 991px) {
+      gap: 8px;
+    }
+  }
+  &__item {
+    @include flex(row, flex-start, center);
+    gap: 32px;
+    width: 49%;
+    padding: 38px 82px;
+    border-radius: 50px;
+    background: #f6f6f6;
+    @media (max-width: 1455px) {
+      width: 100%;
+    }
+    @media (max-width: 991px) {
+      border-radius: 32px;
+      gap: 16px;
+      padding: 24px 32px;
+    }
+    &-img {
+      @media (max-width: 991px) {
+        width: 32px;
+        height: 32px;
+      }
+    }
+    &-title {
+      color: $accent;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      @media (max-width: 991px) {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+    }
+    &-text {
+      font-size: 20px;
+      font-weight: 400;
+      @media (max-width: 991px) {
+        font-size: 14px;
+      }
+    }
+  }
+}
