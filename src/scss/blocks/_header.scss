@@ -10,6 +10,7 @@
   @media (max-width: 991px) {
     padding: 0 32px;
     height: 64px;
+    margin-bottom: 16px;
   }
   &__logo {
     @media (max-width: 991px) {
@@ -21,7 +22,7 @@
     @include flex(row, center, center);
     gap: 80px;
     @media (max-width: 1200px) {
-      gap: 50px;
+      gap: 30px;
     }
     @media (max-width: 991px) {
       position: absolute;

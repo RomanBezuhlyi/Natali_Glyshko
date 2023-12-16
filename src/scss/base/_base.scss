@@ -17,6 +17,12 @@ body {
   background: $bg;
   color: $text;
   font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 24px;
+  @media (max-width: 991px) {
+    font-size: 16px;
+  }
 }
 
 h1,

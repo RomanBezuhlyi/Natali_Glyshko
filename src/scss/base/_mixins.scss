@@ -13,3 +13,25 @@
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+
+@mixin button {
+  @include flex(row, center, center);
+  color: $bg;
+  text-align: center;
+  font-weight: 600;
+  width: 416px;
+  height: 60px;
+  border-radius: 24px;
+  background: $accent;
+  border: 2px solid $accent;
+  @include transition;
+  @media (max-width: 991px) {
+    font-size: 20px;
+    width: 263px;
+    height: 44px;
+  }
+  &:hover {
+    background-color: transparent;
+    color: $accent;
+  }
+}
