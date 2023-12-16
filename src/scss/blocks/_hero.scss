@@ -99,7 +99,7 @@
   }
 
   &__list {
-    @include flex(row, center, center);
+    @include flex(row, space-between, center);
     gap: 20px;
     @media (max-width: 1455px) {
       @include flex(column, center, center);

@@ -13,6 +13,7 @@
     margin-bottom: 16px;
   }
   &__logo {
+    @include flex(row, center, center);
     @media (max-width: 991px) {
       width: 86px !important;
       height: 56px !important;
@@ -46,10 +47,12 @@
     }
   }
   &__call {
+    @include flex(row, center, center);
     @media (max-width: 991px) {
       position: fixed;
       right: 16px;
       bottom: 50px;
+      z-index: 10;
     }
   }
   &__burger {
