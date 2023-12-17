@@ -1,12 +1,4 @@
 var swiper = new Swiper(".about-us__slider", {
-  //   navigation: {
-  //     prevEl: ".media__slider-chev-left",
-  //     nextEl: ".media__slider-chev-right",
-  //   },
-  //   pagination: {
-  //     el: ".media__pagination",
-  //     clickable: true,
-  //   },
   slidesPerView: 1.3,
   spaceBetween: 16,
   breakpoints: {
