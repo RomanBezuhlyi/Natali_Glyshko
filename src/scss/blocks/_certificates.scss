@@ -1,0 +1,41 @@
+.certificates-wrap {
+  margin-bottom: 200px;
+  @media (max-width: 991px) {
+    margin-bottom: 80px;
+  }
+}
+.certificates {
+  &__title {
+    position: relative;
+    margin-bottom: 80px;
+    @media (max-width: 991px) {
+      margin-bottom: 40px;
+    }
+    img {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 20px;
+      @media (max-width: 991px) {
+        width: 32px;
+        height: 32px;
+      }
+    }
+    h2 {
+      @include title;
+    }
+  }
+  &__slider {
+    width: 100%;
+    height: 100%;
+    &-item {
+      height: 600px !important;
+      border-radius: 50px;
+      background: #f6f6f6;
+      @media (max-width: 768px) {
+        height: 315px !important;
+      }
+    }
+  }
+}
