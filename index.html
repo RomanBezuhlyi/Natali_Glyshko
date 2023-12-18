@@ -25,6 +25,7 @@
         <a class="header__nav-item" href="#advantages">Переваги</a>
         <a class="header__nav-item" href="#process">Як це?</a>
         <a class="header__nav-item" href="#price">Ціни</a>
+        <a class="header__nav-item" href="#contacts">Контакти</a>
         <a class="header__nav-item" href="#price">Записатись</a>
       </nav>
       <a href="tel:+380506179796" class="header__call"
@@ -85,12 +86,19 @@
         type="text"
         placeholder="Ім’я"
         required
+        maxlength="20"
       />
       <input
         class="modal__form-input"
         type="text"
         placeholder="Номер телефону"
+        value=""
         required
+        maxlength="13"
+        pattern="[0-9+]+"
+        onfocus="if(this.value==='') this.value='+380';"
+        onblur="if(this.value==='+380') this.value='';"
+        oninput="this.value = this.value.replace(/[^0-9+]/g, '');"
       />
       <button class="modal__form-submit" type="submit">Записатись</button>
     </form>
@@ -593,7 +601,7 @@
     <div class="order">
       <div class="order__title">
         <img src="./img/square-2.svg" alt="" />
-        <h2>Переваги процедури</h2>
+        <h2>Замовити процедури</h2>
       </div>
       <div class="order__content">
         <div class="order__price">
@@ -848,12 +856,19 @@
               type="text"
               placeholder="Ім’я"
               required
+              maxlength="20"
             />
             <input
               class="order__form-input"
               type="text"
               placeholder="Номер телефону"
+              value=""
               required
+              maxlength="13"
+              pattern="[0-9+]+"
+              onfocus="if(this.value==='') this.value='+380';"
+              onblur="if(this.value==='+380') this.value='';"
+              oninput="this.value = this.value.replace(/[^0-9+]/g, '');"
             />
             <button class="order__form-submit" type="submit">Записатись</button>
           </form>
@@ -866,6 +881,40 @@
     </div>
   </div>
 </section>
+<div class="modal-overlay-second">
+  <div class="modal">
+    <button class="modal__close-second" type="button">
+      <img src="./img/close.svg" alt="" />
+    </button>
+    <img class="modal__form-img" src="./img/form.svg" alt="" />
+    <h4 class="modal__form-title">Замовити процедури</h4>
+    <p class="modal__form-service">Депіляція: <span>Пахви</span></p>
+    <form class="modal__form-item">
+      <input
+        class="modal__form-input"
+        type="text"
+        placeholder="Ім’я"
+        required
+        maxlength="20"
+      />
+      <input
+        class="modal__form-input"
+        type="text"
+        placeholder="Номер телефону"
+        value=""
+        required
+        maxlength="13"
+        pattern="[0-9+]+"
+        onfocus="if(this.value==='') this.value='+380';"
+        onblur="if(this.value==='+380') this.value='';"
+        oninput="this.value = this.value.replace(/[^0-9+]/g, '');"
+      />
+      <button class="modal__form-submit" type="submit">Записатись</button>
+    </form>
+    <button class="modal__form-btn">Самостійно зателефоную</button>
+    <a class="modal__form-num" href="tel:+380506179796">+38 050 6179 796</a>
+  </div>
+</div>
  <section class="master-wrapper">
   <div class="container">
     <div class="master">
@@ -982,12 +1031,19 @@
                 type="text"
                 placeholder="Ім’я"
                 required
+                maxlength="20"
               />
               <input
                 class="sale__form-input"
                 type="text"
                 placeholder="Номер телефону"
+                value=""
                 required
+                maxlength="13"
+                pattern="[0-9+]+"
+                onfocus="if(this.value==='') this.value='+380';"
+                onblur="if(this.value==='+380') this.value='';"
+                oninput="this.value = this.value.replace(/[^0-9+]/g, '');"
               />
               <button class="sale__form-submit" type="submit">
                 Записатись
@@ -1023,7 +1079,7 @@
     </div>
   </div>
 </section>
- <section class="contact-wrap">
+ <section id="contacts" class="contact-wrap">
   <div class="container">
     <div class="contact">
       <div class="contact__title">
@@ -1031,6 +1087,16 @@
         <h2>Де ми знаходимось?</h2>
       </div>
       <div class="contact__content">
+        <iframe
+          class="contact__content-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2614.3841408646153!2d33.407756676875614!3d49.06033238647341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d7532e40cc0001%3A0x6081a9a62202909c!2z0J_QtdGA0YjQvtGC0YDQsNCy0L3QtdCy0LAg0LLRg9C70LjRhtGPLCAyMNCwLCDQmtGA0LXQvNC10L3Rh9GD0LosINCf0L7Qu9GC0LDQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCAzOTYwMA!5e0!3m2!1suk!2sua!4v1702916015945!5m2!1suk!2sua"
+          width="100%"
+          height="100%"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
         <ul>
           <li>місто Кременчук</li>
           <li>вулиця Університетська 20А</li>
