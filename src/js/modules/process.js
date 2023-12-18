@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
       bottomItems[index].classList.add("d-block");
 
       // Проверяем ширину экрана и инициализируем/уничтожаем слайдер process__bottom
-      if (window.innerWidth < 991) {
+      if (window.innerWidth <= 991) {
         destroyProcessBottomSwiper();
       } else {
         initProcessBottomSwiper();
@@ -85,13 +85,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Инициализация или уничтожение слайдера process__bottom при загрузке страницы
-  handleProcessBottomSwiper();
-
   // Переинициализация при изменении размеров окна
   window.addEventListener("resize", function () {
     handleProcessBottomSwiper();
   });
+  // Инициализация или уничтожение слайдера process__bottom при загрузке страницы
+  handleProcessBottomSwiper();
 });
 
 function handleProcessBottomSwiper() {
