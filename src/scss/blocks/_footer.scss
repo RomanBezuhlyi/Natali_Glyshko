@@ -1,0 +1,59 @@
+.footer-wrap {
+  background: $text;
+  color: $bg;
+  padding: 64px 0;
+  @media (max-width: 600px) {
+    padding: 56px 0;
+  }
+}
+.footer {
+  @include flex(row, space-between, center);
+  flex-wrap: wrap;
+  @media (max-width: 991px) {
+    justify-content: space-around;
+    gap: 44px;
+  }
+  @media (max-width: 600px) {
+    @include flex(column, center, center);
+  }
+  &__list {
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+    &-title {
+      font-family: $font-main;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      @media (max-width: 600px) {
+        font-weight: 600;
+      }
+    }
+    &-list.first {
+      margin-bottom: 32px;
+    }
+    &-item {
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+  }
+  &__logo-mobile {
+    display: none;
+    @media (max-width: 600px) {
+      display: flex;
+    }
+  }
+  &__logo {
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+  &__social {
+    @include flex(row, flex-start, center);
+    gap: 48px;
+    @media (max-width: 600px) {
+      gap: 56px;
+    }
+  }
+}
