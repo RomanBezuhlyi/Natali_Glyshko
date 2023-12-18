@@ -72,23 +72,17 @@ callButton.addEventListener("click", function () {
   numberLink.style.display = "flex"; // або 'block', залежно від вашого дизайну
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const items = document.querySelectorAll(".item");
-  const modalOverlay = document.querySelector(".modal-overlay-second");
-  const modalFormService = document.querySelector(".modal__form-service span");
-  const modalCloseBtn = document.querySelector(".modal__close-second");
+// Отримати кнопку "Самостійно зателефоную"
+const callButtonMob = document.querySelector(".modal__form-btn");
 
-  items.forEach((item) => {
-    item.addEventListener("click", function () {
-      if (innerWidth <= 991) {
-        const serviceName = item.querySelector(".item__name").innerText;
-        modalFormService.innerText = serviceName;
-        modalOverlay.style.display = "flex";
-      }
-    });
-  });
+// Отримати посилання для відображення
+const numberLinkMob = document.querySelector(".modal__form-num");
 
-  modalCloseBtn.addEventListener("click", function () {
-    modalOverlay.style.display = "none";
-  });
+// Додати слухача подій click до кнопки "Самостійно зателефоную"
+callButtonMob.addEventListener("click", function () {
+  // Зникнення кнопки "Самостійно зателефоную"
+  callButtonMob.style.display = "none";
+
+  // З'явлення посилання
+  numberLinkMob.style.display = "flex"; // або 'block', залежно від вашого дизайну
 });

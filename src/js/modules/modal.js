@@ -30,3 +30,32 @@ document.addEventListener("keydown", (event) => {
     modal.classList.remove("d-block");
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(".item");
+  const modalOverlay = document.querySelector(".modal-overlay-second");
+  const modalFormService = document.querySelector(".modal__form-service span");
+  const modalCloseBtn = document.querySelector(".modal__close-second");
+
+  items.forEach((item) => {
+    item.addEventListener("click", function () {
+      if (innerWidth <= 991) {
+        const serviceName = item.querySelector(".item__name").innerText;
+        modalFormService.innerText = serviceName;
+        modalOverlay.style.display = "flex";
+      }
+    });
+  });
+
+  function closeModal() {
+    modalOverlay.style.display = "none";
+  }
+
+  modalCloseBtn.addEventListener("click", closeModal);
+
+  modalOverlay.addEventListener("click", function (event) {
+    if (event.target === modalOverlay) {
+      closeModal();
+    }
+  });
+});

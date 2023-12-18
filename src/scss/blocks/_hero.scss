@@ -160,9 +160,6 @@
     border-radius: 32px;
     box-shadow: 2.262px 2.262px 9.048px 0px rgba(0, 0, 0, 0.3);
   }
-  @media (max-width: 700px) {
-    width: 100%;
-  }
   &__close {
     position: absolute;
     top: 40px;
@@ -202,11 +199,6 @@
         margin-bottom: 40px;
       }
     }
-    &-item {
-      @media (max-width: 768px) {
-        width: 100%;
-      }
-    }
     &-service {
       text-align: center;
       font-size: 24px;
@@ -240,14 +232,6 @@
         font-size: 16px;
         font-weight: 500;
         margin-bottom: 16px;
-      }
-      @media (max-width: 700px) {
-        width: 350px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      @media (max-width: 480px) {
-        width: 100%;
       }
       &::placeholder {
         color: #9a9a9a;
@@ -290,6 +274,10 @@
       font-weight: 600;
       margin-bottom: 24px;
       color: $accent;
+      @media (max-width: 991px) {
+        font-size: 18px;
+        margin-top: 20px;
+      }
     }
   }
 }
