@@ -4,3 +4,4 @@ import "./modules/process";
 import "./modules/order";
 import "./modules/certificates";
 import "./modules/sale";
+import "./modules/modal";

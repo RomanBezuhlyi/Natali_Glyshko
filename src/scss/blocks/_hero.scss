@@ -128,3 +128,135 @@
     }
   }
 }
+
+// MODAL
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba($color: $text, $alpha: 0.5);
+  @media (max-width: 700px) {
+    padding: 0 16px;
+  }
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include flex(column, center, center);
+  width: 580px;
+  height: 824px;
+  padding: 64px 80px;
+  border-radius: 56px;
+  background: $bg;
+  box-shadow: $shadow;
+  @media (max-width: 1250px) {
+    width: 328px;
+    height: 466px;
+    padding: 40px 16px;
+    border-radius: 32px;
+    box-shadow: 2.262px 2.262px 9.048px 0px rgba(0, 0, 0, 0.3);
+  }
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+  &__close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    @include flex(row, center, center);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 2px solid $text;
+    @media (max-width: 991px) {
+      top: 20px;
+      right: 20px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+  &__form {
+    &-img {
+      margin-bottom: 32px;
+      @media (max-width: 1250px) {
+        width: 72px;
+        height: 70px;
+        margin-bottom: 18px;
+      }
+    }
+    &-title {
+      width: 320px;
+      text-align: center;
+      font-family: $font-main;
+      font-size: 40px;
+      letter-spacing: 0.8px;
+      margin-bottom: 48px;
+      @media (max-width: 1250px) {
+        width: 176px;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 40px;
+      }
+    }
+    &-item {
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+    &-input {
+      display: block;
+      width: 420px;
+      height: 64px;
+      padding: 16px 40px;
+      border-radius: 24px;
+      background: #f6f6f6;
+      color: $text;
+      font-family: $font-main;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      @media (max-width: 1250px) {
+        width: 296px;
+        height: 48px;
+        padding: 9px 23px;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 16px;
+      }
+      @media (max-width: 700px) {
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @media (max-width: 480px) {
+        width: 100%;
+      }
+      &::placeholder {
+        color: #9a9a9a;
+        font-family: $font-main;
+        font-size: 24px;
+        font-weight: 600;
+        @media (max-width: 1250px) {
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+    }
+    &-submit {
+      margin: auto;
+      @include button;
+      @media (max-width: 1250px) {
+        font-size: 20px;
+        width: 263px;
+        height: 44px;
+      }
+    }
+  }
+}
