@@ -140,9 +140,6 @@
   overflow: hidden;
   background-color: rgba($color: $text, $alpha: 0.5);
   z-index: 10;
-  @media (max-width: 700px) {
-    padding: 0 16px;
-  }
 }
 .modal {
   position: absolute;
@@ -210,6 +207,19 @@
         width: 100%;
       }
     }
+    &-service {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      @media (max-width: 991px) {
+        font-size: 14px;
+        font-weight: 400;
+      }
+      span {
+        color: $accent;
+      }
+    }
     &-input {
       display: block;
       width: 420px;
@@ -258,6 +268,28 @@
         width: 263px;
         height: 44px;
       }
+      @media (max-width: 991px) {
+        width: 100%;
+        border-radius: 12px;
+      }
+    }
+    &-btn {
+      margin: auto;
+      @include button;
+      background-color: transparent;
+      color: $accent;
+      @media (max-width: 991px) {
+        width: 100%;
+        border-radius: 12px;
+      }
+    }
+    &-num {
+      display: none;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      color: $accent;
     }
   }
 }

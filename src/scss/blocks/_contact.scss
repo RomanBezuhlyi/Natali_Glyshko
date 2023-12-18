@@ -27,19 +27,29 @@
     }
   }
   &__content {
+    position: relative;
     width: 100%;
     height: 572px;
     padding: 62px 64px;
     border-radius: 50px;
     background: #f6f6f6;
+    overflow: hidden;
     @media (max-width: 991px) {
       height: 466px;
       border-radius: 32px;
       padding: 32px;
     }
+    &-map {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
     ul {
+      position: relative;
+      z-index: 2;
       @include flex(column, flex-start, flex-start);
       gap: 24px;
+      pointer-events: none;
       @media (max-width: 991px) {
         gap: 8px;
       }
@@ -55,6 +65,7 @@
       font-size: 24px;
       font-weight: 400;
       text-align: center;
+      pointer-events: all;
       @media (max-width: 991px) {
         width: 100%;
         padding: 0;

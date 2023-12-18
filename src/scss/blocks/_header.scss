@@ -7,8 +7,10 @@
   background: $bg;
   box-shadow: $shadow;
   margin-bottom: 80px;
-  @media (max-width: 991px) {
+  @media (max-width: 1200px) {
     padding: 0 32px;
+  }
+  @media (max-width: 991px) {
     height: 64px;
     margin-bottom: 16px;
   }
@@ -22,8 +24,11 @@
   &__nav {
     @include flex(row, center, center);
     gap: 80px;
-    @media (max-width: 1200px) {
+    @media (max-width: 1350px) {
       gap: 30px;
+    }
+    @media (max-width: 1200px) {
+      gap: 20px;
     }
     @media (max-width: 991px) {
       position: absolute;

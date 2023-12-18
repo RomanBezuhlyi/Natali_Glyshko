@@ -47,12 +47,19 @@
         type="text"
         placeholder="Ім’я"
         required
+        maxlength="20"
       />
       <input
         class="modal__form-input"
         type="text"
         placeholder="Номер телефону"
+        value=""
         required
+        maxlength="13"
+        pattern="[0-9+]+"
+        onfocus="if(this.value==='') this.value='+380';"
+        onblur="if(this.value==='+380') this.value='';"
+        oninput="this.value = this.value.replace(/[^0-9+]/g, '');"
       />
       <button class="modal__form-submit" type="submit">Записатись</button>
     </form>
