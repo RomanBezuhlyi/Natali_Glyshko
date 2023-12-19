@@ -1,8 +1,5 @@
 .hero-wrapper {
-  margin-bottom: 199px;
-  @media (max-width: 991px) {
-    margin-bottom: 80px;
-  }
+  margin-bottom: 70px;
 }
 .hero {
   @include flex(row, space-between, center);
