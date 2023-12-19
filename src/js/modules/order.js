@@ -9,7 +9,7 @@ var processTopSwiper = new Swiper(".order__price-row", {
       slidesPerView: 3,
     },
     991: {
-      slidesPerView: 2.5,
+      slidesPerView: 2,
       spaceBetween: 20,
     },
     1400: {

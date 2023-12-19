@@ -194,7 +194,7 @@
   box-shadow: $shadow;
   cursor: pointer;
   @media (max-width: 1400px) {
-    width: calc(100% / 2.5);
+    width: calc(100% / 2);
   }
   @media (max-width: 480px) {
     width: calc(100% / 1.5);

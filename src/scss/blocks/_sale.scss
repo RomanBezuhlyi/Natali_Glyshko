@@ -31,10 +31,9 @@
     width: 100%;
 
     @include flex(row, center, center);
-    gap: 20px;
+    gap: 32px;
     @media (max-width: 700px) {
       flex-direction: column;
-      gap: 32px;
     }
   }
   &__right {
@@ -171,7 +170,7 @@
   cursor: pointer;
   @media (max-width: 1700px) {
     width: 328px;
-    height: 165px;
+    height: 152px;
     padding: 24px 32px;
     border-radius: 32px;
   }
