@@ -6,10 +6,8 @@
   gap: 20px;
   width: 100%;
   margin-bottom: 20px;
-  @media (max-width: 1200px) {
-    flex-wrap: wrap-reverse;
-  }
   @media (max-width: 991px) {
+    flex-wrap: wrap-reverse;
     gap: 16px;
     margin-bottom: 0;
   }
@@ -19,16 +17,21 @@
     background: $bg;
     box-shadow: $shadow;
     padding: 64px 69px 64px 72px;
-    @media (max-width: 1200px) {
-      width: 100%;
+    @media (max-width: 1700px) {
+      height: 415px;
+    }
+    @media (max-width: 1400px) {
+      height: 343px;
     }
     @media (max-width: 991px) {
       padding: 0;
+      width: 100%;
+      height: auto;
     }
   }
   &__left {
     width: 50%;
-    @media (max-width: 1200px) {
+    @media (max-width: 991px) {
       width: 100%;
       text-align: center;
     }
@@ -40,22 +43,22 @@
     font-size: 64px;
     font-weight: 500;
     margin-bottom: 16px;
-    @media (max-width: 1450px) {
-      font-size: 50px;
+    @media (max-width: 1700px) {
+      font-size: 30px;
+      font-weight: 700;
     }
     @media (max-width: 991px) {
       margin: 32px 32px 16px 32px;
-      font-size: 30px;
-      font-weight: 700;
-      margin-bottom: 16px;
     }
   }
   &__text {
     text-align: center;
     margin-bottom: 64px;
+    @media (max-width: 1700px) {
+      margin-bottom: 32px;
+    }
     @media (max-width: 991px) {
       margin: 0 32px 32px 32px;
-      margin-bottom: 32px;
     }
   }
 
@@ -65,6 +68,14 @@
     padding: 32px 64px;
     border-radius: 50px;
     border: 2px solid $accent;
+    @media (max-width: 1700px) {
+      padding: 32px;
+      gap: 32px;
+    }
+    @media (max-width: 1400px) {
+      padding: 16px 32px;
+      gap: 16px;
+    }
     @media (max-width: 991px) {
       padding: 32px;
       gap: 32px;
@@ -74,11 +85,11 @@
     &-top {
       @include flex(row, center, center);
       gap: 16px;
-      @media (max-width: 991px) {
+      @media (max-width: 1700px) {
         gap: 8px;
       }
       img {
-        @media (max-width: 991px) {
+        @media (max-width: 1700px) {
           width: 32px;
           height: 32px;
         }
@@ -87,7 +98,7 @@
         text-align: center;
         font-weight: 600;
         padding-right: 38px;
-        @media (max-width: 991px) {
+        @media (max-width: 1700px) {
           padding: 0;
           text-align: left;
         }
@@ -101,8 +112,8 @@
   &__list {
     @include flex(row, space-between, center);
     gap: 20px;
-    @media (max-width: 1455px) {
-      @include flex(column, center, center);
+    @media (max-width: 1400px) {
+      gap: 10px;
     }
     @media (max-width: 991px) {
       display: none;
@@ -111,17 +122,26 @@
   &__item {
     @include flex(row, center, center);
     gap: 32px;
-    width: 460px;
+    width: 33%;
     padding: 46px 40px;
     border-radius: 50px;
     background: $bg;
     box-shadow: $shadow;
-    @media (max-width: 1455px) {
-      width: 100%;
+    @media (max-width: 1400px) {
+      padding: 24px;
+      border-radius: 32px;
+    }
+    img {
+      @media (max-width: 1700px) {
+        width: 20%;
+      }
     }
     p {
       font-size: 24px;
       color: $black;
+      @media (max-width: 1700px) {
+        font-size: 14px;
+      }
     }
   }
 }

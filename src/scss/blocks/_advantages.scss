@@ -6,7 +6,7 @@
   &__title {
     position: relative;
     margin-bottom: 80px;
-    @media (max-width: 991px) {
+    @media (max-width: 1700px) {
       margin-bottom: 40px;
     }
     img {
@@ -15,7 +15,8 @@
       top: 50%;
       transform: translateY(-50%);
       border-radius: 20px;
-      @media (max-width: 991px) {
+      @media (max-width: 1700px) {
+        border-radius: 10px;
         width: 32px;
         height: 32px;
       }
@@ -39,16 +40,19 @@
     padding: 38px 82px;
     border-radius: 50px;
     background: #f6f6f6;
-    @media (max-width: 1455px) {
-      width: 100%;
+    @media (max-width: 1700px) {
+      padding: 24px 32px;
+      border-radius: 32px;
+    }
+    @media (max-width: 1400px) {
+      width: 48%;
+      gap: 16px;
     }
     @media (max-width: 991px) {
-      border-radius: 32px;
-      gap: 16px;
-      padding: 24px 32px;
+      width: 100%;
     }
     &-img {
-      @media (max-width: 991px) {
+      @media (max-width: 1400px) {
         width: 32px;
         height: 32px;
       }
@@ -58,7 +62,7 @@
       font-size: 32px;
       font-weight: 700;
       margin-bottom: 16px;
-      @media (max-width: 991px) {
+      @media (max-width: 1700px) {
         font-size: 18px;
         font-weight: 600;
         margin-bottom: 12px;
@@ -67,7 +71,7 @@
     &-text {
       font-size: 20px;
       font-weight: 400;
-      @media (max-width: 991px) {
+      @media (max-width: 1700px) {
         font-size: 14px;
       }
     }

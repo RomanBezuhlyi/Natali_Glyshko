@@ -4,11 +4,8 @@
 .about-us {
   @include flex(row, space-between, flex-start);
   gap: 140px;
-  @media (max-width: 1800px) {
+  @media (max-width: 1700px) {
     gap: 32px;
-  }
-  @media (max-width: 1200px) {
-    @include flex(column, center, center);
   }
   @media (max-width: 991px) {
     flex-direction: column-reverse;
@@ -17,10 +14,6 @@
   &__images {
     @include flex(column, center, center);
     gap: 20px;
-    @media (max-width: 1200px) {
-      margin-left: 340px;
-      margin-bottom: -300px;
-    }
     @media (max-width: 991px) {
       display: none;
     }
@@ -29,10 +22,21 @@
       height: 580px;
       border-radius: 50px;
       background: #f6f6f6;
+      @media (max-width: 1700px) {
+        width: 480px;
+        height: 480px;
+      }
+      @media (max-width: 1400px) {
+        width: 380px;
+        height: 380px;
+      }
     }
     &-list {
       @include flex(row, center, center);
       gap: 20px;
+      @media (max-width: 1700px) {
+        gap: 15px;
+      }
     }
   }
   &__slider {
@@ -46,13 +50,16 @@
   &__content {
     &-logo {
       margin-bottom: 32px;
+      @media (max-width: 1400px) {
+        width: 30%;
+        margin-bottom: 16px;
+      }
       @media (max-width: 991px) {
         position: relative;
         left: 50%;
         transform: translateX(-50%);
         width: 116px;
         height: 74px;
-        margin-bottom: 16px;
       }
     }
     &-text {
@@ -78,9 +85,15 @@
   height: 180px;
   border-radius: 50px;
   background: #f6f6f6;
-  @media (max-width: 991px) {
-    width: 242px !important;
-    height: 242px !important;
+  @media (max-width: 1700px) {
+    border-radius: 32px;
+    width: 150px !important;
+    height: 150px !important;
+  }
+  @media (max-width: 1400px) {
+    border-radius: 16px;
+    width: 110px !important;
+    height: 110px !important;
   }
 }
 
