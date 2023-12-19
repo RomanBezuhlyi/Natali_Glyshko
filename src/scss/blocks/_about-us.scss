@@ -86,3 +86,12 @@
     height: 242px !important;
   }
 }
+
+.small-img-slide {
+  height: 180px;
+  border-radius: 50px;
+  background: #f6f6f6;
+  @media (max-width: 991px) {
+    height: 242px !important;
+  }
+}

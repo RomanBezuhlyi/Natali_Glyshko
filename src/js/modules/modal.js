@@ -41,8 +41,18 @@ document.addEventListener("DOMContentLoaded", function () {
     item.addEventListener("click", function () {
       if (innerWidth <= 991) {
         const serviceName = item.querySelector(".item__name").innerText;
-        modalFormService.innerText = serviceName;
-        modalOverlay.style.display = "flex";
+
+        // Check if the service is not already in modalFormService
+        if (!modalFormService.innerText.includes(serviceName)) {
+          // If modalFormService is not empty, add a plus sign
+          if (modalFormService.innerText) {
+            modalFormService.innerText += " + ";
+          }
+
+          modalFormService.innerText += serviceName;
+        }
+
+        modalOverlay.style.display = "flex"; // Always open the modal
       }
     });
   });
