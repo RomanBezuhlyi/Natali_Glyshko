@@ -244,6 +244,8 @@
     }
   }
   &__img {
+    overflow: hidden;
+    object-fit: cover;
     width: 132px;
     height: 87px;
     border-radius: 12px;

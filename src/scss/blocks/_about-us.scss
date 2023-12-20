@@ -22,6 +22,8 @@
       height: 580px;
       border-radius: 50px;
       background: #f6f6f6;
+      overflow: hidden;
+      object-fit: cover;
       @media (max-width: 1700px) {
         width: 480px;
         height: 480px;
@@ -81,6 +83,8 @@
 }
 
 .small-img {
+  overflow: hidden;
+  object-fit: cover;
   width: 180px;
   height: 180px;
   border-radius: 50px;
@@ -98,10 +102,15 @@
 }
 
 .small-img-slide {
+  overflow: hidden;
+  object-fit: cover;
   height: 180px;
   border-radius: 50px;
   background: #f6f6f6;
   @media (max-width: 991px) {
-    height: 242px !important;
+    height: 220px !important;
+  }
+  @media (max-width: 480px) {
+    height: 200px !important;
   }
 }
